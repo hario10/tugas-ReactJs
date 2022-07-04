@@ -20,7 +20,7 @@ const Effect = () => {
 
     const getNewsData = async () => {
       try {
-        const {data} = await axios.get('https://newsapi.org/v2/top-headlines?country=id&apiKey=a18da3f1c1fe4f25b1c98cc7854e2f73&i')
+        const {data} = await axios.get('https://newsapi.org/v2/top-headlines?country=id&apiKey=a968ef77142546548223fe7ce49e0ed7&i')
         setNews(data.articles);
       } catch (error) {
          console.log(error, 'data error');
@@ -38,7 +38,7 @@ const Effect = () => {
     const handleSubmit = async (e) => {
           try {
             e.preventDefault()
-            const {data} = await axios.get(`https://newsapi.org/v2/top-headlines?country=id&apiKey=a18da3f1c1fe4f25b1c98cc7854e2f73&q=${search}`)
+            const {data} = await axios.get(`https://newsapi.org/v2/top-headlines?country=id&apiKey=a968ef77142546548223fe7ce49e0ed7&q=${search}`)
               setNews(data.articles)
             } catch (error) {
                 console.log(error, 'Data error');
